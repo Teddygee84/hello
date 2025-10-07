@@ -1,0 +1,315 @@
+body {
+  font-family: sans-serif;
+  background-color: #f9f6f0;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #4b2e1a;
+  color: #fff;
+  padding: 20px 40px;
+}
+
+header h1 {
+  margin-bottom: 10px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+.hero {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+.hero-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #4b2e1a;
+  color: white;
+}
+
+
+/* Clothing Grid */
+.clothing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.item {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.item h3 {
+  margin: 15px 15px 5px;
+  font-size: 1.2rem;
+  color: #5d4037;
+}
+
+.item p {
+  margin: 0 15px 10px;
+  font-size: 0.95rem;
+}
+
+.item a {
+  display: inline-block;
+  margin: 0 15px 15px;
+  color: #bf360c;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.item a:hover {
+  text-decoration: underline;
+}
+
+/* ========= MUSIC PAGE ========= */
+.music-main{
+    max-width:1100px;
+    margin:auto;
+    padding:20px;
+}
+
+.video-sec{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.video-wrapper{
+    position:relative;
+    padding-bottom:56.25%; /* 16:9 */
+    height:0;
+    overflow:hidden;
+    max-width:800px;
+    margin:20px auto;
+    box-shadow:0 4px 12px rgba(0,0,0,.15);
+    border-radius:8px;
+}
+
+.video-wrapper iframe{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+}
+
+.dance-articles{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(300px, 1fr));
+    gap:30px;
+}
+
+.dance-articles article{
+    background:#fff;
+    border:1px solid #ddd;
+    border-radius:8px;
+    padding:25px;
+    box-shadow:0 2px 6px rgba(0,0,0,.08);
+}
+
+.dance-articles h3{
+    margin-bottom:12px;
+    color:#5d4037;
+}
+
+/* ========= CRAFTS PAGE ========= */
+.crafts-main{
+    max-width:1200px;
+    margin:auto;
+    padding:20px;
+}
+
+.crafts-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+    gap:35px;
+}
+
+.craft-card{
+    background:#fff;
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 4px 10px rgba(0,0,0,.10);
+    transition:transform .3s, box-shadow .3s;
+    position:relative;
+}
+
+.craft-card::before{              /* decorative top stripe */
+    content:'';
+    position:absolute;
+    top:0; left:0; right:0;
+    height:6px;
+    background:linear-gradient(90deg, #bf360c, #ffcc80);
+}
+
+.craft-card:hover{
+    transform:translateY(-7px);
+    box-shadow:0 10px 20px rgba(0,0,0,.15);
+}
+
+.craft-card img{
+    width:100%;
+    height:200px;
+    object-fit:cover;
+    display:block;
+}
+
+.craft-card .info{
+    padding:18px 22px 22px;
+}
+
+.craft-card h3{
+    margin-bottom:8px;
+    color:#4e342e;
+    font-size:1.25rem;
+}
+
+.craft-card p{
+    margin-bottom:12px;
+    color:#555;
+    line-height:1.5;
+}
+
+.craft-card a{
+    font-weight:bold;
+    color:#bf360c;
+    text-decoration:none;
+}
+
+.craft-card a::after{              /* tiny arrow */
+    
+    transition:margin .2s;
+}
+
+.craft-card a:hover::after{
+    margin-left:4px;
+}
+
+/* subtle fade-in animation for cards */
+@keyframes fadeUp{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1; transform:translateY(0);}
+}
+
+.craft-card{
+    animation:fadeUp .6s ease-out;
+}
+
+
+/* ========= CONTACT PAGE ========= */
+.contact-main{
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    background:#fff;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 4px 12px rgba(0,0,0,.08);
+}
+
+.contact-form label{
+    font-weight:bold;
+    color:#4e342e;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    width:100%;
+    padding:12px 15px;
+    border:2px solid #ccc;
+    border-radius:6px;
+    font-size:1rem;
+    font-family:inherit;
+    transition:border-color .3s, box-shadow .3s;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#bf360c;
+    box-shadow:0 0 0 3px rgba(191,54,12,.20);
+}
+
+.contact-form button{
+    align-self:center;
+    background:#bf360c;
+    color:#fff;
+    padding:14px 32px;
+    border:none;
+    border-radius:30px;
+    font-size:1.05rem;
+    cursor:pointer;
+
+}
+
+.contact-form button:hover{
+    background:#8d1e00;
+    transform:translateY(-2px);
+}
+
+/* ----- mobile tweaks ----- */
+@media (max-width:600px){
+    .contact-form{
+        padding:20px;
+    }
+}
